@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            margin: 10px;
+            height: 80px;
+            width: auto;
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+        }
+
+        .image-wrapper {
+            position: relative;
+            /* allows overlay positioning */
+            height: 80px;
+            width: 120px;
+            margin-right: 10px;
+        }
+
+        .image-wrapper img {
+            height: 100%;
+            width: 100%;
+            border-radius: 5px;
+            display: block;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 3px;
+            right: 5px;
+            background-color: rgba(9, 8, 8, 0.449);
+            color: white;
+            font-size: 12px;
+            padding: 1px 1px;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="image-wrapper">
+            <img src="https://i.ytimg.com/vi/tVzUXW6siu0/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLDf-xrqgUw55JSfKsoykKVhngkzRA"
+                alt="">
+            <div class="overlay">31:11</div>
+        </div>
+        <div class="text">Installing VS CODE</div>
+    </div>
+</body>
+
+</html>
