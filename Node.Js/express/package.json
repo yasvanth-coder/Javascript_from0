@@ -1,0 +1,21 @@
+{
+  "name": "webdev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yasvanth-coder/Javascript_from0.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/yasvanth-coder/Javascript_from0/issues"
+  },
+  "homepage": "https://github.com/yasvanth-coder/Javascript_from0#readme"
+}
