@@ -3,20 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yasvanth-coder/WebDev.git"
+    "url": "git+https://github.com/yasvanth-coder/Javascript_from0.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
+  "type": "commonjs",
   "bugs": {
-    "url": "https://github.com/yasvanth-coder/WebDev/issues"
+    "url": "https://github.com/yasvanth-coder/Javascript_from0/issues"
   },
-  "homepage": "https://github.com/yasvanth-coder/WebDev#readme"
+  "homepage": "https://github.com/yasvanth-coder/Javascript_from0#readme"
 }
