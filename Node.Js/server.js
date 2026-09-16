@@ -1,3 +1,5 @@
+//---------install express and ejs module using npm install express ejs
+
 var slugify = require('slugify')
 let a = slugify('some string') // some-string
 console.log(a)
