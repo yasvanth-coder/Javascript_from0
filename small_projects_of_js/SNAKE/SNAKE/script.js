@@ -1,4 +1,6 @@
 const board = document.querySelector('#board');
+let score = document.getElementById("score");
+let time = document.getElementById("time");
 const rows = 6;
 const cols = 20;
 const blocks = [];
@@ -25,8 +27,10 @@ function render(){
     });
 
     blocks[`${food.y}-${food.x}`].classList.add('food');
-
+    let val = -3;
     snake.forEach((segment) => {
+        val += 1;
+        score.textContent = `${val}`;
         blocks[`${segment.y}-${segment.x}`].classList.add('fill');
     });
 }
@@ -47,7 +51,6 @@ setInterval(() => {
         return;
     }
     snake.unshift(head);
-
     if (head.x === food.x && head.y === food.y) {
         food = {
             x: Math.floor(Math.random() * cols),
@@ -69,3 +72,13 @@ addEventListener('keydown', (event) => {
         direction = 'down';
     }
 });
+let milliSeconds = 0;
+    setInterval(() => {
+    milliSeconds++;
+    time.textContent = `${milliSeconds}`;
+    if(milliSeconds == 60000){
+        
+    }
+    }, 1000);
+
+
