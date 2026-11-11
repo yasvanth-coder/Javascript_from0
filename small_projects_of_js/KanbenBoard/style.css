@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+:root {
+  color-scheme: dark;
+  --background: #101010;
+  --surface: #141414;
+  --border: #aaa;
+  --text: #f0f0f0;
+  --muted: #c8c8c8;
+  --accent: #7f4749;
+  --accent-border: #ad7779;
+  --column-width: 145px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-width: 320px;
+  padding: 18px 6vw 32px;
+  background: var(--background);
+  color: var(--text);
+  font-family: Inter, Arial, sans-serif;
+  font-size: 12px;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+header,
+.header,
+.board-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 22px;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h1,
+.title,
+.board-title {
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+#add-task,
+.add-task,
+.add-button,
+header button,
+.header button {
+  border: 1px solid var(--accent-border);
+  border-radius: 6px;
+  padding: 4px 12px;
+  background: linear-gradient(#875154, #713f42);
+  color: #fff;
+  font-size: 11px;
+  line-height: 1.5;
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.14);
+}
+
+#add-task:hover,
+.add-task:hover,
+.add-button:hover,
+header button:hover,
+.header button:hover {
+  background: #965b5e;
+}
+
+.board,
+.kanban-board,
+.columns {
+  display: flex;
+  justify-content: center;
+  gap: clamp(24px, 8vw, 52px);
+  width: 100%;
+}
+
+.column,
+.kanban-column,
+.board-column {
+  display: flex;
+  flex: 0 1 var(--column-width);
+  flex-direction: column;
+  min-width: 0;
+  min-height: 305px;
+  padding: 9px 7px 12px;
+  border: 1.5px solid var(--border);
+  border-radius: 17px;
+  background: rgba(20, 20, 20, 0.45);
+}
+
+.column-header,
+.kanban-column-header,
+.board-column-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 3px 12px;
+  color: var(--text);
+  font-size: 11px;
+}
+
+.count,
+.task-count {
+  color: var(--muted);
+}
+
+.tasks,
+.task-list,
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.task,
+.task-card,
+.card {
+  position: relative;
+  min-height: 45px;
+  padding: 7px 9px 25px;
+  border: 1.5px solid #b9b9b9;
+  border-radius: 10px;
+  background: #171717;
+  color: var(--text);
+  cursor: pointer;
+  transition:
+    border-color 160ms ease,
+    background-color 160ms ease,
+    box-shadow 160ms ease,
+    transform 160ms ease;
+}
+
+.task:hover,
+.task-card:hover,
+.card:hover {
+  border-color: var(--accent-border);
+  background: #1d1d1d;
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.45);
+  transform: translateY(-2px);
+}
+
+.task[draggable="true"] {
+  cursor: grab;
+}
+
+.task[draggable="true"]:active {
+  cursor: grabbing;
+  opacity: 0.65;
+}
+
+.task h3,
+.task-card h3,
+.card h3,
+.task-title {
+  margin-bottom: 2px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.task p,
+.task-card p,
+.card p,
+.task-description {
+  color: var(--muted);
+  font-size: 8px;
+  line-height: 1.35;
+}
+
+.delete,
+.delete-task,
+.remove-task,
+.task button {
+  position: absolute;
+  right: 7px;
+  bottom: 4px;
+  border: 1px solid var(--accent-border);
+  border-radius: 4px;
+  padding: 2px 7px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 8px;
+  line-height: 1.35;
+  cursor: pointer;
+  transition:
+    background-color 160ms ease,
+    border-color 160ms ease,
+    transform 160ms ease;
+}
+
+.delete:hover,
+.delete-task:hover,
+.remove-task:hover,
+.task button:hover {
+  border-color: #d79b9e;
+  background: #a96467;
+  transform: scale(1.05);
+}
+
+form,
+.task-form {
+  display: grid;
+  gap: 10px;
+  width: min(100%, 360px);
+  margin: 0 auto 24px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  border: 1px solid #686868;
+  border-radius: 6px;
+  padding: 8px 10px;
+  outline: none;
+  background: #191919;
+  color: var(--text);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--accent-border);
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 16px;
+  }
+
+  .board,
+  .kanban-board,
+  .columns {
+    justify-content: flex-start;
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+  }
+
+  .column,
+  .kanban-column,
+  .board-column {
+    flex: 0 0 var(--column-width);
+  }
+}
+
+@media (max-width: 420px) {
+  header,
+  .header,
+  .board-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 12px;
+  }
+}

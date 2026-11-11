@@ -1,0 +1,51 @@
+:root{
+    /* Background Color */
+    --bg-primary-color: #1a1818;
+    --bg-secondary-color: #141431;
+    --bg-active-color: #ece2e2;
+    --bg-tertiary-color: #f2f1f1;
+    --bg-danger-color: #bf3333;
+    --bg-success-color: #23c523;
+
+    /* Text Color */
+    --text-primary-color: #ece2e2;  
+    --text-secondary-color: #f2f1f1;
+    --text-tertiary-color: #d1cfcf;
+    --text-active-color: #1a1818;
+    
+
+    /* padding */
+    --padding-sm: 0.5rem;
+    --padding-md: 1rem;
+    --padding-lg: 1.5rem;
+    --padding-xl: 2rem;
+    --padding-2xl: 2.5rem;
+
+    /* margin */
+    --margin-sm: 0.5rem;    
+    --margin-md: 1rem;
+    --margin-lg: 1.5rem;
+    --margin-xl: 2rem;
+    --margin-2xl: 2.5rem;
+
+    /* gutter */
+    --gutter-sm: 0.5rem;
+    --gutter-md: 1rem;
+    --gutter-lg: 1.5rem;
+    --gutter-xl: 2rem;
+    --gutter-2xl: 2.5rem;
+
+    /* font size */
+    --font-size-sm: 0.75rem;
+    --font-size-md: 1rem;
+    --font-size-lg: 1.25rem;
+    --font-size-xl: 1.5rem;
+    --font-size-2xl: 2rem;
+
+    /* border radius */
+    --border-radius-sm: 0.25rem;
+    --border-radius-md: 0.5rem;
+    --border-radius-lg: 0.75rem;
+    --border-radius-xl: 1rem;
+    --border-radius-2xl: 1.25rem;
+}
